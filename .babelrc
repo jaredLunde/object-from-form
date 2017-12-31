@@ -1,0 +1,86 @@
+{
+  "env": {
+    "production": {
+      "presets": [
+        [
+          "@babel/preset-env", {
+            "debug": true,
+            "modules": false,
+            "useBuiltIns": "usage",
+            "targets": {
+              "browsers": "defaults"
+            }
+          }
+        ],
+        "@babel/preset-stage-0"
+      ]
+    },
+    "commonjs": {
+      "presets": [
+        [
+          "@babel/preset-env", {
+            "debug": true,
+            "loose": true,
+            "useBuiltIns": "usage",
+            "targets": {
+              "browsers": "defaults"
+            },
+            "modules": "commonjs"
+          }
+        ],
+        "@babel/preset-stage-0"
+      ],
+      "plugins": [
+        "@babel/plugin-transform-runtime"
+      ]
+    },
+    "es": {
+      "presets": [
+        [
+          "@babel/preset-env", {
+            "debug": true,
+            "modules": false,
+            "useBuiltIns": "usage"
+          }
+        ],
+        "@babel/preset-stage-0"
+      ],
+      "plugins": [
+        "@babel/plugin-transform-runtime"
+      ]
+    },
+    "development": {
+      "presets": [
+        [
+          "@babel/preset-env", {
+            "debug": false,
+            "modules": false,
+            "useBuiltIns": "usage",
+            "targets": {
+              "browsers": ["chrome >= 56"]
+            }
+          }
+        ],
+        "@babel/preset-stage-0"
+      ],
+      "plugins": [
+        "@babel/plugin-transform-runtime"
+      ]
+    },
+    "cli": {
+      "presets": [
+        [
+          "@babel/preset-env", {
+            "debug": true,
+            "modules": false,
+            "useBuiltIns": "usage"
+          }
+        ],
+        "@babel/preset-stage-0"
+      ],
+      "plugins": [
+        "@babel/plugin-transform-runtime"
+      ]
+    }
+  }
+}
