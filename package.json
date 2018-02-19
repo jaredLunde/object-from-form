@@ -1,6 +1,6 @@
 {
   "name": "object-from-form",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Converts form to Javascript objects and JSON",
   "main": "commonjs/index.js",
   "module": "es/index.js",
