@@ -60,7 +60,7 @@ export function castPayload (node) {
         return node.value
       }
     } else if (node.checked === false) {
-      return false
+      return node.type === 'radio' ? void 0 : false
     }
 
     return null
@@ -81,7 +81,11 @@ export function recomposePayload (payload, child, parts) {
   } else {
     const name = parts.splice(0, 1)
     payload = payload || {}
-    payload[name] = recomposePayload(payload[name], child, parts)
+    const payloadValue = recomposePayload(payload[name], child, parts)
+
+    if (payloadValue !== void 0) {
+      payload[name] = payloadValue
+    }
   }
 
   return payload
