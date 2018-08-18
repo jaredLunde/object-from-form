@@ -6,7 +6,6 @@
           "@babel/preset-env", {
             "loose": true,
             "modules": false,
-            "useBuiltIns": "usage",
             "targets": {
               "browsers": "defaults"
             }
@@ -24,7 +23,6 @@
         [
           "@babel/preset-env", {
             "loose": true,
-            "useBuiltIns": "usage",
             "targets": {
               "browsers": "defaults"
             },
@@ -43,13 +41,11 @@
         [
           "@babel/preset-env", {
             "loose": true,
-            "modules": false,
-            "useBuiltIns": "usage"
+            "modules": false
           }
         ]
       ],
       "plugins": [
-        "@babel/plugin-transform-runtime",
         "@babel/plugin-proposal-export-default-from",
         "@babel/plugin-proposal-export-namespace-from"
       ]
@@ -59,16 +55,11 @@
         [
           "@babel/preset-env", {
             "loose": true,
-            "modules": false,
-            "useBuiltIns": "usage",
-            "targets": {
-              "browsers": ["chrome >= 56"]
-            }
+            "modules": false
           }
         ]
       ],
       "plugins": [
-        "@babel/plugin-transform-runtime",
         "@babel/plugin-proposal-export-default-from",
         "@babel/plugin-proposal-export-namespace-from"
       ]
@@ -78,13 +69,11 @@
         [
           "@babel/preset-env", {
             "loose": true,
-            "modules": false,
-            "useBuiltIns": "usage"
+            "modules": false
           }
         ]
       ],
       "plugins": [
-        "@babel/plugin-transform-runtime",
         "@babel/plugin-proposal-export-default-from",
         "@babel/plugin-proposal-export-namespace-from"
       ]
