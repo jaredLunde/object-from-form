@@ -4,22 +4,25 @@
       "presets": [
         [
           "@babel/preset-env", {
-            "debug": true,
+            "loose": true,
             "modules": false,
             "useBuiltIns": "usage",
             "targets": {
               "browsers": "defaults"
             }
           }
-        ],
-        "@babel/preset-stage-0"
+        ]
+      ],
+      "plugins": [
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from"
       ]
     },
     "commonjs": {
       "presets": [
         [
           "@babel/preset-env", {
-            "debug": true,
             "loose": true,
             "useBuiltIns": "usage",
             "targets": {
@@ -27,59 +30,63 @@
             },
             "modules": "commonjs"
           }
-        ],
-        "@babel/preset-stage-0"
+        ]
       ],
       "plugins": [
-        "@babel/plugin-transform-runtime"
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from"
       ]
     },
     "es": {
       "presets": [
         [
           "@babel/preset-env", {
-            "debug": true,
+            "loose": true,
             "modules": false,
             "useBuiltIns": "usage"
           }
-        ],
-        "@babel/preset-stage-0"
+        ]
       ],
       "plugins": [
-        "@babel/plugin-transform-runtime"
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from"
       ]
     },
     "development": {
       "presets": [
         [
           "@babel/preset-env", {
-            "debug": false,
+            "loose": true,
             "modules": false,
             "useBuiltIns": "usage",
             "targets": {
               "browsers": ["chrome >= 56"]
             }
           }
-        ],
-        "@babel/preset-stage-0"
+        ]
       ],
       "plugins": [
-        "@babel/plugin-transform-runtime"
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from"
       ]
     },
     "cli": {
       "presets": [
         [
           "@babel/preset-env", {
-            "debug": true,
+            "loose": true,
             "modules": false,
             "useBuiltIns": "usage"
           }
-        ],
-        "@babel/preset-stage-0"
+        ]
       ],
       "plugins": [
-        "@babel/plugin-transform-runtime"
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from"
       ]
     }
   }
